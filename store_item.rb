@@ -18,3 +18,32 @@ end
 magic_card_3.each do |key, value|
   puts "#{key}: #{value}"
 end
+
+puts "======================="
+
+class Card
+  
+  attr_reader :name, :color, :price, :foil
+  attr_writer :price
+
+  def initialize(name, color, price, foil)
+    @name = name
+    @color = color
+    @price = price
+    @foil = foil
+  end
+
+  def show_info
+    return "#{@name}: $#{@price}"
+  end
+
+end
+
+magic_card_1 = Card.new("Black Lotus", "Colorless", 25000, false)
+magic_card_2 = Card.new("Mox Opal", "Colorless", 250, true)
+magic_card_3 = Card.new("Wildgrowth Walker", "Green", 2, true)
+
+p magic_card_1.show_info
+p magic_card_2.show_info
+p magic_card_3.show_info
+
