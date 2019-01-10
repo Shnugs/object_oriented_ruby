@@ -1,5 +1,5 @@
 class Vehicle
-  attr_accessor :speed, :direction
+  attr_reader :speed, :direction
   
   def initialize
     @speed = 0
@@ -21,7 +21,7 @@ class Vehicle
 end
 
 class Car < Vehicle
-  attr_accessor :fuel, :make, :model
+  attr_reader :fuel, :make, :model
 
   def initialize(input_objects)
     super()
@@ -37,7 +37,7 @@ class Car < Vehicle
 end
 
 class Bike < Vehicle
-  attr_accessor :speed, :type, :weight
+  attr_reader :speed, :type, :weight
 
   def initialize(input_objects)
     super()
