@@ -21,6 +21,14 @@ class Vehicle
 end
 
 class Car < Vehicle
+  attr_accessor :fuel, :make, :model
+
+  def initialize(input_objects)
+    super()
+    @fuel = input_objects[:fuel]
+    @make = input_objects[:make]
+    @model = input_objects[:model]
+  end
 
   def honk_horn
     puts "Beeeeeeep!"
@@ -29,27 +37,23 @@ class Car < Vehicle
 end
 
 class Bike < Vehicle
+  attr_accessor :speed, :type, :weight
 
+  def initialize(input_objects)
+    super()
+    @speed = input_objects[:speed]
+    @type = input_objects[:type]
+    @weight = input_objects[:weight]
+  end
   def ring_bell
     puts "Ring ring!"
   end
 
 end
 
-my_car = Car.new
-my_bike = Bike.new 
+my_car = Car.new({fuel: 25, make: "Mercury", model: "Grand Marquis"})
+my_bike = Bike.new({speed: 20, type: "Schwinn", weight: 25})
 
-p my_car
-p my_bike
 
-my_bike.ring_bell
-my_car.honk_horn
-
-my_car.accelerate
-my_bike.accelerate
-p my_car.speed
-p my_bike.speed
-my_car.brake
-p my_car.speed
-my_bike.brake
-p my_car.speed
+p my_car.make
+p my_bike.type
