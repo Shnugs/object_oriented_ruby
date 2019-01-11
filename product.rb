@@ -1,4 +1,4 @@
-module ArbitraryModuleName
+module StoreFront
   class Product
       attr_reader :name, :price
       attr_writer :price

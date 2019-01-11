@@ -1,5 +1,5 @@
 require "./product.rb"
-module ArbitraryModuleName
+module StoreFront
   class Card < Product
     attr_reader :color, :foil, :cmc
 

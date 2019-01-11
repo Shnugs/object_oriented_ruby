@@ -1,5 +1,5 @@
 require "./product.rb"
-module ArbitraryModuleName
+module StoreFront
   class Snack < Product
     attr_reader :shelf_life, :price, :name
 
